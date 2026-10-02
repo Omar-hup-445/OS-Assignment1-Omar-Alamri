@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Omar Abdullah Saleh Alamri] |
+| **Student ID** | [445350256] |
+| **University Email** | [445350256]@std.psau.edu.sa |
+| **GitHub Username** | [Omar-hup-445] |
+| **Repository Link** | [https://github.com/Omar-hup-445/OS-Assignment1-Omar-Alamri] |
  
 ---
 
@@ -129,29 +129,44 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 1, 2026, 10:30 PM]
+
+**What I did**: Set up my repository and added my student ID.
 
 **Details**:
 
-**Challenges**:
+- Opened the assignment repository in VS Code.
 
-**Solution**:
+- Changed the student ID in `SchedulerSimulation.java` to 445350256.
 
-**Time spent**:
+- Ran the program to make sure the starter code worked.
+
+- Committed and pushed my student ID change to GitHub.
+
+**Challenges**: I needed to understand the starter project and make sure my changes were saved and pushed correctly.
+
+**Solution**: I checked the code in VS Code, ran the program, and verified the commit on GitHub.
+
+**Time spent**: 4 Hours
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 2, 2026, 4:30 PM]
+
+**What I did**: Reviewed the threading methods and understood how the scheduler executes each process.
 
 **Details**:
+- Reviewed how the Process class implements Runnable.
+- Studied how new Thread(process) creates a thread for a simulated process.
+- Reviewed Thread.start(), Thread.join(), and Thread.sleep().
+- Followed how a process moves from the ready queue to execution.
+- Reviewed why a new thread is created when a process is re-queued.
 
-**Challenges**:
+**Challenges**: I was confused about the difference between the Process object, the Java thread, and which thread waits when join() is called.
 
-**Solution**:
+**Solution**: I followed one process step by step through addProcessToQueue(), start(), run(), sleep(), and join() until I understood the execution order.
 
-**Time spent**:
+**Time spent**: [4 Hours]
 
 ---
 
