@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Omar Abdullah Saleh Alamri] |
-| **Student ID** | [445350256] |
-| **University Email** | [445350256]@std.psau.edu.sa |
-| **GitHub Username** | [Omar-hup-445] |
-| **Repository Link** | [https://github.com/Omar-hup-445/OS-Assignment1-Omar-Alamri] |
+| **Full Name** | Omar Abdullah Saleh Alamri |
+| **Student ID** | 445350256 |
+| **University Email** | 445350256@std.psau.edu.sa |
+| **GitHub Username** | Omar-hup-445 |
+| **Repository Link** | https://github.com/Omar-hup-445/OS-Assignment1-Omar-Alamri |
  
 ---
 
@@ -166,20 +166,26 @@
 
 **Solution**: I followed one process step by step through addProcessToQueue(), start(), run(), sleep(), and join() until I understood the execution order.
 
-**Time spent**: [4 Hours]
+**Time spent**: 4 Hours
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 3, 2026, 5:00 PM]
+
+**What I did**: Reviewed my documentation and verified my technical answers using my program output.
 
 **Details**:
+- Reviewed my Reflection answers in Part B.
+- Reviewed all Technical Answers in Part C.
+- Ran and checked my program output using my student ID.
+- Verified the P15 example with a burst time of 11649 ms and a time quantum of 5000 ms.
+- Confirmed that P15 was re-queued two times before it finished.
 
-**Challenges**:
+**Challenges**: I needed to make sure that my Ready Queue example matched my actual program output and not just the expected behavior.
 
-**Solution**:
+**Solution**: I compared the P15 execution step by step with my output and verified its remaining time after each time quantum.
 
-**Time spent**:
+**Time spent**: 2 Hours
 
 ---
 
@@ -252,7 +258,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[I learned that multithreading allows a program to use multiple threads to perform different tasks. In this assignment, the Process class implements Runnable, so each simulated process can be executed by a Java thread. I learned that Thread.start() starts a new thread and causes its run() method to execute. I also understood that Thread.join() makes the main thread wait until the current process thread finishes. Inside run(), Thread.sleep() is used to simulate the CPU execution time of the process. The most important thing I learned is that the Process object and the Java Thread are not the same thing because the process in this program is simulated while the thread actually executes its code.]
+I learned that multithreading allows a program to use multiple threads to perform different tasks. In this assignment, the Process class implements Runnable, so each simulated process can be executed by a Java thread. I learned that Thread.start() starts a new thread and causes its run() method to execute. I also understood that Thread.join() makes the main thread wait until the current process thread finishes. Inside run(), Thread.sleep() is used to simulate the CPU execution time of the process. The most important thing I learned is that the Process object and the Java Thread are not the same thing because the process in this program is simulated while the thread actually executes its code.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -260,7 +266,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[The most challenging part was understanding the difference between a Process and a Java Thread. At first, I thought the Process object was the thread itself. This confused me because the Process class implements Runnable, but the actual thread is created using new Thread(process). I learned that the Process stores its information, while the Thread executes its run() method. I understood this better by following one process through the code step by step. After that, the difference between them became clear to me.]
+The most challenging part was understanding the difference between a Process and a Java Thread. At first, I thought the Process object was the thread itself. This confused me because the Process class implements Runnable, but the actual thread is created using new Thread(process). I learned that the Process stores its information, while the Thread executes its run() method. I understood this better by following one process through the code step by step. After that, the difference between them became clear to me.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -268,7 +274,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[I overcame this challenge by reading the code carefully and following one process step by step. I reviewed the Process class and how it implements Runnable. Then, I followed how new Thread(process) creates a Java thread and how Thread.start() executes the run() method. I also reviewed Thread.join() to understand which thread waits during the simulation. I ran the program and compared the output with the execution flow in the code. Testing and reviewing each step helped me understand the difference between the Process object and the Java Thread.]
+I overcame this challenge by reading the code carefully and following one process step by step. I reviewed the Process class and how it implements Runnable. Then, I followed how new Thread(process) creates a Java thread and how Thread.start() executes the run() method. I also reviewed Thread.join() to understand which thread waits during the simulation. I ran the program and compared the output with the execution flow in the code. Testing and reviewing each step helped me understand the difference between the Process object and the Java Thread.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -276,7 +282,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Multithreading can be used in many real-world applications, such as a web browser. A browser can use different threads to handle tasks like loading a web page, playing a video, and responding to user actions. This allows different tasks to make progress without making the whole application wait for one task to finish. This is similar to my assignment, where each simulated Process is executed using a Java Thread. I learned that threads can be managed and coordinated using methods such as start(), join(), and sleep(). Multithreading can make applications more responsive when several tasks need to be handled.]
+Multithreading can be used in many real-world applications, such as a web browser. A browser can use different threads to handle tasks like loading a web page, playing a video, and responding to user actions. This allows different tasks to make progress without making the whole application wait for one task to finish. This is similar to my assignment, where each simulated Process is executed using a Java Thread. I learned that threads can be managed and coordinated using methods such as start(), join(), and sleep(). Multithreading can make applications more responsive when several tasks need to be handled.
 
 ### Optional: What would you like to learn more about?
 
@@ -308,7 +314,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[A process and a thread are different because a process normally has its own memory space, while threads in the same program can share memory. Threads also have less overhead to create than separate processes. In my code, the class named Process represents a simulated process and stores information such as its burst time and remaining time. It is not a real operating-system process; a real Java thread is created using new Thread(process) inside addProcessToQueue() to execute it. Threads are used in this assignment because they make it easier to simulate and coordinate multiple processes inside one Java program.]
+A process and a thread are different because a process normally has its own memory space, while threads in the same program can share memory. Threads also have less overhead to create than separate processes. In my code, the class named Process represents a simulated process and stores information such as its burst time and remaining time. It is not a real operating-system process; a real Java thread is created using new Thread(process) inside addProcessToQueue() to execute it. Threads are used in this assignment because they make it easier to simulate and coordinate multiple processes inside one Java program.
 
 ## Question 2: Ready Queue Behavior
 
@@ -320,10 +326,11 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[In my program, P15 had a burst time of 11649 ms while the time quantum was 5000 ms. Since P15 could not finish within one quantum, it was added back to the ready queue after its first execution. It was re-queued two times before it finished, running for 5000 ms, another 5000 ms, and finally 1649 ms. Re-queueing allows other processes in the ready queue to get CPU time instead of letting one process use the CPU until it finishes. This makes Round-Robin scheduling fair among the processes.]
+In my program, P15 had a burst time of 11649 ms while the time quantum was 5000 ms. Since P15 could not finish within one quantum, it was added back to the ready queue after its first execution. It was re-queued two times before it finished, running for 5000 ms, another 5000 ms, and finally 1649 ms. Re-queueing allows other processes in the ready queue to get CPU time instead of letting one process use the CPU until it finishes. This makes Round-Robin scheduling fair among the processes.
 
 Example from my output:
 
+```text
 P15 executing quantum [5000ms]
 Remaining time: 6649ms
 P15 yields CPU for context switch
@@ -337,11 +344,11 @@ P15(Priorty:4) added to ready queue | Burst time: 11649ms
 P15 executing quantum [1649ms]
 Remaining time: 0ms
 P15 finished execution!
-
 ```
 
 **Explanation of example:**
-[P15 has a burst time of 11649 ms and a time quantum of 5000 ms. After the first quantum, it had 6649 ms remaining and was re-queued. After the second quantum, it had 1649 ms remaining and was re-queued again. On its third turn, P15 executed the remaining 1649 ms and finished.]
+
+P15 has a burst time of 11649 ms and a time quantum of 5000 ms. After the first quantum, it had 6649 ms remaining and was re-queued. After the second quantum, it had 1649 ms remaining and was re-queued again. On its third turn, P15 executed the remaining 1649 ms and finished.
 
 ## Question 3: Thread Lifecycle
 
@@ -351,15 +358,15 @@ P15 finished execution!
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [P1 is in the New state when a new Java Thread is created for it using new Thread(process) inside addProcessToQueue(), before Thread.start() is called.]
+1. **New**: P1 is in the New state when a new Java Thread is created using `new Thread(process)` before `Thread.start()` is called.
 
-2. **Runnable**: [P1 becomes Runnable when Thread.start() is called in the scheduler loop, making P1’s thread ready to be scheduled for execution.]
+2. **Runnable**: P1 becomes Runnable when `Thread.start()` is called and the thread is ready to execute.
 
-3. **Running**: [P1 is Running when the JVM schedules its thread and the `run()` method starts executing the process for its time quantum.]
+3. **Running**: P1 is Running when its `run()` method is executing.
 
-4. **Waiting**: [P1's thread waits temporarily when Thread.sleep() is called inside run() to simulate CPU execution time. The main thread also waits for P1 to finish its current execution when Thread.join() is called.]
+4. **Waiting**: P1's thread waits temporarily during `Thread.sleep()`, while `Thread.join()` makes the main thread wait for P1's thread to finish.
 
-5. **Terminated**: [P1's thread becomes Terminated when its run() method finishes. If P1 still has remaining burst time, a new Thread is created for the same P1 process when it is re-queued]
+5. **Terminated**: P1's thread becomes Terminated when its `run()` method finishes.
 
 ## Question 4: Real-World Applications
 
@@ -369,21 +376,25 @@ P15 finished execution!
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [CPU Scheduling]
+### Example 1 (operating-system level): CPU Scheduling
 
 **Description**:
-[An operating system can use Round-Robin scheduling to share CPU time among multiple running processes. Each process gets a limited time quantum, and when it ends, a context switch allows another process in the ready queue to use the CPU.]
+
+An operating system can use Round-Robin scheduling to share CPU time among multiple running processes. Each process gets a limited time quantum, and when it ends, a context switch allows another process in the ready queue to use the CPU.
 
 **Why Round-Robin works well here**:
-[Round-Robin provides fairness because every process in the ready queue gets a chance to use the CPU. It also improves responsiveness because one process cannot keep the CPU for a long time while other processes are waiting. This is similar to my simulation, where an unfinished process is re-queued after its time quantum ends.]
 
-### Example 2: [Web Server Handling Client Requests]
+Round-Robin provides fairness because every process in the ready queue gets a chance to use the CPU. It also improves responsiveness because one process cannot keep the CPU for a long time while other processes are waiting. This is similar to my simulation, where an unfinished process is re-queued after its time quantum ends.
+
+### Example 2: Web Server Handling Client Requests
 
 **Description**:
-[A web server can use multiple threads to handle requests from different clients. Each client request can receive a limited amount of processing time, similar to the time quantum in my simulation.]
+
+A web server can use multiple threads to handle requests from different clients. Each client request can receive a limited amount of processing time, similar to the time quantum in my simulation.
 
 **Why Round-Robin works well here**:
-[Round-Robin provides fairness because each client request gets a chance to be processed. A context switch allows the system to move from one request to another, which can improve responsiveness. This is similar to my ready queue, where unfinished work waits for another turn.]
+
+Round-Robin provides fairness because each client request gets a chance to be processed. A context switch allows the system to move from one request to another, which can improve responsiveness. This is similar to my ready queue, where unfinished work waits for another turn.
 
 ## Summary
 
@@ -395,6 +406,7 @@ P15 finished execution!
 **Concepts I need to study more:**
 1. Thread lifecycle states and how threads move between these states.
 2. How operating systems perform real CPU scheduling and context switching.
+
 ---
 
 # ✅ Final Checklist (complete before submitting)
@@ -426,12 +438,12 @@ P15 finished execution!
 - [ ] No `[...]` placeholders left
 - [ ] No section headers deleted
 
-**Video**
-- [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
+*Video*
+- [ ] 2-3 minutes long, named StudentID_Assignment1_Demo.mp4
 - [ ] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
-- [ ] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
+- [ ] Link is *public* (tested in an incognito window) and pasted in the *Video Link* section above
 
-**Blackboard**
-- [ ] Submit **only** the link to your public GitHub repository
+*Blackboard*
+- [ ] Submit *only* the link to your public GitHub repository
 
-> 🎯 **Good luck!** Start early, commit regularly, and make sure you can explain every line you submit.
+> 🎯 *Good luck!* Start early, commit regularly, and make sure you can explain every line you submit.
