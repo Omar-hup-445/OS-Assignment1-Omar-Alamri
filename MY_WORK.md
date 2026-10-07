@@ -136,7 +136,7 @@
 *Details*:
 - Created a new GitHub repository for the assignment.
 - Cloned the starter code and opened it in VS Code.
-- Explored the project structure and read all provided files (Colors.class, Process.class, SchedulerSimulation.java). 
+- Explored the project structure. 
 - Ran the original program to understand the output and how the Round-Robin scheduler works.
 - Added my student ID to the code to generate my own unique output.
 - Made an initial commit and pushed the files to GitHub.
@@ -237,13 +237,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+*Total time spent on assignment*: 15 Hours
 
-**Most challenging part**:
+*Most challenging part*: Understanding the difference between a Process object and a Java Thread, and tracking the waiting time for each process while it moves through the Ready Queue.
 
-**Most interesting learning**:
+*Most interesting learning*: Learning how Round-Robin scheduling uses a time quantum to give each process CPU time, and how Java threads are created and coordinated using start(), join(), and sleep().
 
-**What I would do differently next time**:
+*What I would do differently next time*: I would test each feature immediately after implementing it and document my work at the end of every work session. This would make it easier to track my changes and keep my Development Log and commit history organize.
 
 ---
 
@@ -336,24 +336,20 @@ In my program, P15 had a burst time of 11649 ms while the time quantum was 5000 
 Example from my output:
 
 ```text
-P15 executing quantum [5000ms]
+P15 executing quantum 5000ms
 Remaining time: 6649ms
 P15 yields CPU for context switch
-P15(Priorty:4) added to ready queue | Burst time: 11649ms
+P15(Priority:4) added to ready queue | Burst time: 11649ms
 
-P15 executing quantum [5000ms]
+P15 executing quantum 5000ms
 Remaining time: 1649ms
 P15 yields CPU for context switch
-P15(Priorty:4) added to ready queue | Burst time: 11649ms
+P15(Priority:4) added to ready queue | Burst time: 11649ms
 
-P15 executing quantum [1649ms]
+P15 executing quantum 1649ms
 Remaining time: 0ms
 P15 finished execution!
-```
-
-**Explanation of example:**
-
-P15 has a burst time of 11649 ms and a time quantum of 5000 ms. After the first quantum, it had 6649 ms remaining and was re-queued. After the second quantum, it had 1649 ms remaining and was re-queued again. On its third turn, P15 executed the remaining 1649 ms and finished.
+ ```
 
 ## Question 3: Thread Lifecycle
 
