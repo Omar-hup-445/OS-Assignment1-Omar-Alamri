@@ -207,20 +207,26 @@
 **Time spent**: 2 Hours
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 7, 2026, 7:00 PM]
+**What I did**: Recorded and uploaded the assignment demonstration video
 
 **Details**:
+- Recorded the assignment demonstration video
+- Showed my GitHub repository and commit history
+- Explained the three features: priority, context switches, and waiting time
+- Showed the program execution and simulation output
+- Uploaded the video and prepared the shareable link
 
-**Challenges**:
+**Challenges**: Keeping the explanation clear while showing all the required parts
 
-**Solution**:
+**Solution**: Prepared the important code sections before recording and explained each feature briefly
 
-**Time spent**:
+**Time spent**: 45 minutes
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
+### Entry 6 - Optional - Date and Time
+ N/A
 **What I did**:
 
 **Details**:
@@ -291,16 +297,13 @@ Multithreading can be used in many real-world applications, such as a web browse
 
 ### Optional: What would you like to learn more about?
 
-[Any topics related to threading or operating systems that you're curious about?]
-
+N/A
 ### Optional: How confident do you feel about multithreading concepts now?
 
-[Beginner / Intermediate / Confident. What do you understand well? What needs more practice?]
-
+N/A
 ### Optional: Feedback on the assignment
 
-[Any comments? Was it helpful? Too easy or hard? Suggestions?]
-
+N/A
 ---
 
 # Part C: Technical Answers (0.5 mark)
