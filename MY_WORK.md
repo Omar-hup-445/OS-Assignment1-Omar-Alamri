@@ -136,7 +136,7 @@
 *Details*:
 - Created a new GitHub repository for the assignment.
 - Cloned the starter code and opened it in VS Code.
-- Explored the project structure and read all provided files (Colors.class, Process.class, SchedulerSimulation.java).
+- Explored the project structure and read all provided files (Colors.class, Process.class, SchedulerSimulation.java). 
 - Ran the original program to understand the output and how the Round-Robin scheduler works.
 - Added my student ID to the code to generate my own unique output.
 - Made an initial commit and pushed the files to GitHub.
