@@ -35,7 +35,7 @@ class Process implements Runnable {
     private int priority;
 
     // Constructor to initialize the process with name, burst time, and time quantum
-    // Feature 3: Track process waiting time
+    // Feature 3: Track process waiting time  
     private long creationTime;
     private long totalWaitingTime;
     private long readyQueueEntryTime;
@@ -49,12 +49,12 @@ class Process implements Runnable {
         // Feature 1: Store the priority of this process
         this.priority = priority;
 
-        // Feature 3: Initialize process timing information
+        // Feature 3: Initialize process timing information  
         this.creationTime = System.currentTimeMillis();
         this.totalWaitingTime = 0;
     }
 
-    // Feature 3: Add waiting time for this process
+    // Feature 3: Add waiting time for this process  
     public void addWaitingTime(long waitingTime) {
         totalWaitingTime += waitingTime;
     }
@@ -63,17 +63,17 @@ class Process implements Runnable {
         return creationTime;
     }
 
-    // Feature 3: Return the total waiting time of this process
+    // Feature 3: Return the total waiting time of this process  
     public long getTotalWaitingTime() {
         return totalWaitingTime;
     }
 
-    // Feature 3: Record the time when the process enters the ready queue
+    // Feature 3: Record the time when the process enters the ready queue  
     public void markReadyQueueEntry() {
         readyQueueEntryTime = System.currentTimeMillis();
     }
 
-    // Feature 3: Calculate how long the process waited in the ready queue
+    // Feature 3: Calculate how long the process waited in the ready queue  
     public void calculateWaitingTime() {
         totalWaitingTime += System.currentTimeMillis() - readyQueueEntryTime;
     }
@@ -213,7 +213,7 @@ public class SchedulerSimulation {
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
 
-        // Feature 3: Store all processes in a LinkedList for the final summary
+        // Feature 3: Store all processes in a LinkedList for the final summary  
         LinkedList<Process> allProcesses = new LinkedList<>();
 
         // Print simulation header with elegant formatting
@@ -254,7 +254,7 @@ public class SchedulerSimulation {
             // Create a new process object with a unique name, burst time, and the defined time quantum
             Process process = new Process("P" + i, burstTime, timeQuantum, priority);
 
-            // Feature 3: Add each process to the LinkedList for the final summary
+            // Feature 3: Add each process to the LinkedList for the final summary  
             allProcesses.add(process);
 
             // Add the process to the ready queue and the map
@@ -294,7 +294,7 @@ public class SchedulerSimulation {
             System.out.println(Colors.BRIGHT_WHITE + "]" + Colors.RESET);
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
 
-            // Feature 3: Calculate how long the process waited in the ready queue
+            // Feature 3: Calculate how long the process waited in the ready queue  
             Process currentProcess = processMap.get(currentThread);
             currentProcess.calculateWaitingTime();
 
@@ -345,10 +345,10 @@ public class SchedulerSimulation {
         // Feature 2: Display the total number of context switches
         System.out.println("Total context switches: " + contextSwitchCount);
 
-        // Feature 3: Display waiting time and turnaround time for all processes
+        // Feature 3: Display waiting time and turnaround time for all processes  
         System.out.println("\nProcess Summary:");
 
-        // Feature 3: Go through the LinkedList and print the required properties for each process
+        // Feature 3: Go through the LinkedList and print the required properties for each process   
         for (Process process : allProcesses) {
             long waitingTime = process.getTotalWaitingTime();
             long turnaroundTime = waitingTime + process.getBurstTime();
@@ -360,7 +360,7 @@ public class SchedulerSimulation {
                     + " | Turnaround Time: " + turnaroundTime + "ms"
             );
 
-            // Feature 3: Separate each process from the next process with an empty line
+            // Feature 3: Separate each process from the next process with an empty line  
             System.out.println();
         }
     }
@@ -371,7 +371,7 @@ public class SchedulerSimulation {
         // Create a new thread to run the process
         Thread thread = new Thread(process);
 
-        // Feature 3: Record when the process enters the ready queue
+        // Feature 3: Record when the process enters the ready queue  
         process.markReadyQueueEntry();
 
         // Add the thread to the ready queue
