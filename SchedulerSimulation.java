@@ -3,8 +3,6 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.ArrayList;
-import java.util.List;
 
 // ANSI Color Codes for enhanced terminal output
 class Colors {
@@ -47,7 +45,11 @@ class Process implements Runnable {
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime;
+
+        // Feature 1: Store the priority of this process
         this.priority = priority;
+
+        // Feature 3: Initialize process timing information
         this.creationTime = System.currentTimeMillis();
         this.totalWaitingTime = 0;
     }
@@ -61,14 +63,17 @@ class Process implements Runnable {
         return creationTime;
     }
 
+    // Feature 3: Return the total waiting time of this process
     public long getTotalWaitingTime() {
         return totalWaitingTime;
     }
 
+    // Feature 3: Record the time when the process enters the ready queue
     public void markReadyQueueEntry() {
         readyQueueEntryTime = System.currentTimeMillis();
     }
 
+    // Feature 3: Calculate how long the process waited in the ready queue
     public void calculateWaitingTime() {
         totalWaitingTime += System.currentTimeMillis() - readyQueueEntryTime;
     }
@@ -172,6 +177,7 @@ class Process implements Runnable {
         return remainingTime;
     }
 
+    // Feature 1: Return the priority of this process
     public int getPriority() {
         return priority;
     }
@@ -183,6 +189,7 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+
     // Feature 2: Counts the total number of context switches
     private static int contextSwitchCount = 0;
 
@@ -206,8 +213,8 @@ public class SchedulerSimulation {
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
 
-        // Feature 3: Store all processes for the final summary
-        List<Process> allProcesses = new ArrayList<>();
+        // Feature 3: Store all processes in a LinkedList for the final summary
+        LinkedList<Process> allProcesses = new LinkedList<>();
 
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN +
@@ -247,7 +254,7 @@ public class SchedulerSimulation {
             // Create a new process object with a unique name, burst time, and the defined time quantum
             Process process = new Process("P" + i, burstTime, timeQuantum, priority);
 
-            // Feature 3: Save the process for the final summary
+            // Feature 3: Add each process to the LinkedList for the final summary
             allProcesses.add(process);
 
             // Add the process to the ready queue and the map
@@ -338,20 +345,23 @@ public class SchedulerSimulation {
         // Feature 2: Display the total number of context switches
         System.out.println("Total context switches: " + contextSwitchCount);
 
-        // Feature 3: Display waiting time summary
+        // Feature 3: Display waiting time and turnaround time for all processes
         System.out.println("\nProcess Summary:");
-        System.out.println("Process Name | Burst Time | Waiting Time | Turnaround Time");
 
+        // Feature 3: Go through the LinkedList and print the required properties for each process
         for (Process process : allProcesses) {
             long waitingTime = process.getTotalWaitingTime();
             long turnaroundTime = waitingTime + process.getBurstTime();
 
             System.out.println(
-                    process.getName() + " | " +
-                    process.getBurstTime() + " | " +
-                    waitingTime + " | " +
-                    turnaroundTime
+                    "Process: " + process.getName()
+                    + " | Burst Time: " + process.getBurstTime() + "ms"
+                    + " | Waiting Time: " + waitingTime + "ms"
+                    + " | Turnaround Time: " + turnaroundTime + "ms"
             );
+
+            // Feature 3: Separate each process from the next process with an empty line
+            System.out.println();
         }
     }
 
@@ -372,7 +382,8 @@ public class SchedulerSimulation {
 
         // Print a message indicating the process has entered the ready queue
         System.out.println(Colors.BLUE + "  ➕ " + Colors.BOLD + Colors.CYAN + process.getName() +
-                Colors.RESET + Colors.BLUE + "(Priority:" + process.getPriority() + ")" + " added to ready queue" + Colors.RESET +
+                Colors.RESET + Colors.BLUE + "(Priority:" + process.getPriority() + ")" +
+                " added to ready queue" + Colors.RESET +
                 " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" +
                 Colors.RESET);
     }

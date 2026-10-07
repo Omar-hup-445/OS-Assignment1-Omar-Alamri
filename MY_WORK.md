@@ -131,27 +131,46 @@
 
 ### Entry 1 - [October 1, 2026, 10:30 PM]
 
-**What I did**: Set up my repository and added my student ID.
+*What I did*: Set up the development environment and explored the provided code.
 
-**Details**:
+*Details*:
+- Created a new GitHub repository for the assignment.
+- Cloned the starter code and opened it in VS Code.
+- Explored the project structure and read all provided files (Colors.class, Process.class, SchedulerSimulation.java).
+- Ran the original program to understand the output and how the Round-Robin scheduler works.
+- Added my student ID to the code to generate my own unique output.
+- Made an initial commit and pushed the files to GitHub.
+
+*Challenges*: I was not familiar with some parts of the code and how the threading and ready queue were implemented.
+
+*Solution*: I carefully read the comments, ran the program multiple times, and used debugging/print statements to understand the flow.
+
+*Time spent*: 3 Hours
+---
+
+### Entry 2 - [October 2, 2026, 4:30 PM]
+
+*What I did*: Set up my repository and added my student ID.
+
+*Details*:
 
 - Opened the assignment repository in VS Code.
 
-- Changed the student ID in `SchedulerSimulation.java` to 445350256.
+- Changed the student ID in SchedulerSimulation.java to 445350256.
 
 - Ran the program to make sure the starter code worked.
 
 - Committed and pushed my student ID change to GitHub.
 
-**Challenges**: I needed to understand the starter project and make sure my changes were saved and pushed correctly.
+*Challenges*: I needed to understand the starter project and make sure my changes were saved and pushed correctly.
 
-**Solution**: I checked the code in VS Code, ran the program, and verified the commit on GitHub.
+*Solution*: I checked the code in VS Code, ran the program, and verified the commit on GitHub.
 
-**Time spent**: 4 Hours
+*Time spent*: 4 Hour
 
 ---
 
-### Entry 2 - [October 2, 2026, 4:30 PM]
+### Entry 3 - [October 3, 2026, 5:00 PM]
 
 **What I did**: Reviewed the threading methods and understood how the scheduler executes each process.
 
@@ -168,10 +187,10 @@
 
 **Time spent**: 4 Hours
 
+
 ---
 
-### Entry 3 - [October 3, 2026, 5:00 PM]
-
+### Entry 4 - [October 3, 2026, 10:40AM]
 **What I did**: Reviewed my documentation and verified my technical answers using my program output.
 
 **Details**:
@@ -186,20 +205,6 @@
 **Solution**: I compared the P15 execution step by step with my output and verified its remaining time after each time quantum.
 
 **Time spent**: 2 Hours
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
-
 ---
 
 ### Entry 5 - [Date and Time]
