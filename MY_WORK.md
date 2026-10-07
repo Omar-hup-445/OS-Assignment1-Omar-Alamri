@@ -181,7 +181,7 @@
 - Followed how a process moves from the ready queue to execution.
 - Reviewed why a new thread is created when a process is re-queued.
 
-**Challenges**: I was confused about the difference between the Process object, the Java thread, and which thread waits when join() is called.
+**Challenges**: I was confused about the difference between the Process object, the Java thread, and which thread waits when join() is called. 
 
 **Solution**: I followed one process step by step through addProcessToQueue(), start(), run(), sleep(), and join() until I understood the execution order.
 
