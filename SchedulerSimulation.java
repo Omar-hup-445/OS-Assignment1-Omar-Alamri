@@ -30,9 +30,9 @@ class Process implements Runnable {
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
 
-    // Feature 1: Priority from 1 to 10 (10 is the highest)
-    // Priority is for display only and does not change the FIFO queue order
-    private int priority;
+    // Feature 1: Priority from 1 to 10 (10 is the highest) 
+    // Priority is for display only and does not change the FIFO queue order 
+    private int priority; 
 
     // Constructor to initialize the process with name, burst time, and time quantum
     // Feature 3: Track process waiting time  
@@ -46,7 +46,7 @@ class Process implements Runnable {
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime;
 
-        // Feature 1: Store the priority of this process
+        // Feature 1: Store the priority of this process 
         this.priority = priority;
 
         // Feature 3: Initialize process timing information  
@@ -177,7 +177,7 @@ class Process implements Runnable {
         return remainingTime;
     }
 
-    // Feature 1: Return the priority of this process
+    // Feature 1: Return the priority of this process 
     public int getPriority() {
         return priority;
     }
@@ -248,7 +248,7 @@ public class SchedulerSimulation {
             // Random burst time for each process between timeQuantum/2 and 3*timeQuantum
             int burstTime = timeQuantum/2 + random.nextInt(2 * timeQuantum + 1);
 
-            // Feature 1: Generate a random priority from 1 to 10
+            // Feature 1: Generate a random priority from 1 to 10 
             int priority = 1 + random.nextInt(10);
 
             // Create a new process object with a unique name, burst time, and the defined time quantum
